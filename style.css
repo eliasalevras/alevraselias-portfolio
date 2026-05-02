@@ -1,0 +1,323 @@
+/* 1. Global & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* 2. Navigation */
+.top-nav {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: hsla(0, 0%, 100%, 0);
+    backdrop-filter: blur(5px);
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.top-nav a:hover {
+    color: #2563eb;
+}
+
+/* 3. Hero Section */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.green-text {
+    color: #111827; /* Σκούρο όπως το template */
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.hero-image-container .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero-socials {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.hero-socials a {
+    font-size: 1.3rem;
+    color: #374151;
+    transition: color 0.3s;
+}
+
+.hero-socials a:hover {
+    color: #2563eb;
+}
+
+/* 4. Section Layout (Two Columns) */
+.section-container {
+    display: flex;
+    padding: 80px 10%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-left {
+    flex: 0 0 35%;
+}
+
+.section-right {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 4px;
+    background-color: #2563eb;
+}
+
+/* 5. About Section specific */
+.about-text {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #374151;
+}
+
+/* Skills/Tags Styling - Ακριβώς όπως image_2d287d.png */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #f3f4f6;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+/* 6. Project Cards */
+.project-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #2563eb;
+    transform: translateY(-5px);
+}
+
+.project-number {
+    font-size: 0.75rem;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.project-header h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.project-link {
+    background: #111827;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.project-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag {
+    background: #111827;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* 7. Education & Experience Cards */
+.education-card, .timeline-content {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.card-header, .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.institution, .company {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 8. Footer */
+.main-footer {
+    padding: 60px 10%;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 0.85rem;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+/* Container για τα κουμπιά */
+.hero-btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Κοινό στυλ κουμπιών */
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Το "Open CV" κουμπί (Γεμάτο) */
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    border: 2px solid #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Το "Download CV" κουμπί (Με περίγραμμα) */
+.btn-secondary {
+    background-color: transparent;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.btn-secondary:hover {
+    background-color: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Mobile Fix */
+@media (max-width: 900px) {
+    .hero-btns {
+        justify-content: center;
+    }
+}
+/* 9. Responsive */
+@media (max-width: 900px) {
+    .hero-wrapper, .section-container, .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section-left { margin-bottom: 40px; }
+    .hero-image-container { margin-top: 30px; }
+    .hero-socials, .skills-container { justify-content: center; }
+}
