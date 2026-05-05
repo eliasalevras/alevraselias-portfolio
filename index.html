@@ -10,27 +10,25 @@
     <script defer src="/_vercel/analytics/script.js"></script>
 </head>
 <script>
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
+
     const VISIT_KEY = "hasVisited";
     const COUNT_KEY = "visitorCount";
 
     let count = localStorage.getItem(COUNT_KEY);
+    count = count ? parseInt(count) : 0;
 
-    if (!count) {
-        count = 0;
-    } else {
-        count = parseInt(count);
-    }
-
-    // Αν είναι πρώτη επίσκεψη σε αυτό το browser
     if (!localStorage.getItem(VISIT_KEY)) {
         count++;
         localStorage.setItem(COUNT_KEY, count);
         localStorage.setItem(VISIT_KEY, "true");
     }
 
-    document.getElementById("visitor-count").innerText = count;
-})();
+    const counterEl = document.getElementById("visitor-count");
+    if (counterEl) {
+        counterEl.innerText = count;
+    }
+});
 </script>
 <body>
 
