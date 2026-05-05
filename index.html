@@ -9,27 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="/_vercel/analytics/script.js"></script>
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
 
-    const VISIT_KEY = "hasVisited";
-    const COUNT_KEY = "visitorCount";
-
-    let count = localStorage.getItem(COUNT_KEY);
-    count = count ? parseInt(count) : 0;
-
-    if (!localStorage.getItem(VISIT_KEY)) {
-        count++;
-        localStorage.setItem(COUNT_KEY, count);
-        localStorage.setItem(VISIT_KEY, "true");
-    }
-
-    const counterEl = document.getElementById("visitor-count");
-    if (counterEl) {
-        counterEl.innerText = count;
-    }
-});
-</script>
 <body>
 
     <!-- Navigation Bar -->
@@ -246,9 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="https://github.com/eliasalevras"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
-        <p class="visitor-counter">
-                Visitors: <span id="visitor-count">0</span>
-        </p>
+
         <!-- Δεξιά πλευρά -->
         <div class="footer-right">
             <nav class="footer-nav">
