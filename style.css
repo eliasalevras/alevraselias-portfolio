@@ -247,7 +247,12 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
+.visitor-counter {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
 .footer-nav a {
     margin-left: 20px;
     text-decoration: none;
